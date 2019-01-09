@@ -20,14 +20,14 @@
 
     <el-container>
       <el-aside width="200px" class="aside">
-        <el-menu unique-opened default-active="2">
+        <el-menu router unique-opened default-active="2">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
               <span>用户管理</span>
             </template>
-            <el-menu-item index="1-3">
-              <i class></i>
+            <el-menu-item index="users">
+              <i class="el-icon-success"></i>
               用户列表
             </el-menu-item>
           </el-submenu>
@@ -38,11 +38,11 @@
               <span>权限管理</span>
             </template>
             <el-menu-item index="1-3">
-              <i class></i>
+              <i class="el-icon-success"></i>
               角色列表
             </el-menu-item>
             <el-menu-item index="1-4">
-              <i class></i>
+              <i class="el-icon-success"></i>
               权限列表
             </el-menu-item>
           </el-submenu>
@@ -53,15 +53,15 @@
               <span>商品管理</span>
             </template>
             <el-menu-item index="1-3">
-              <i class></i>
+              <i class="el-icon-success"></i>
               商品列表
             </el-menu-item>
             <el-menu-item index="1-4">
-              <i class></i>
+              <i class="el-icon-success"></i>
               分类参数
             </el-menu-item>
             <el-menu-item index="1-5">
-              <i class></i>
+              <i class="el-icon-success"></i>
               商品分类
             </el-menu-item>
           </el-submenu>
@@ -72,7 +72,7 @@
               <span>订单管理</span>
             </template>
             <el-menu-item index="1-3">
-              <i class></i>
+              <i class="el-icon-success"></i>
               订单列表
             </el-menu-item>
           </el-submenu>
@@ -83,14 +83,16 @@
               <span>数据统计</span>
             </template>
             <el-menu-item index="1-3">
-              <i class></i>
+              <i class="el-icon-success"></i>
               数据列表
             </el-menu-item>
           </el-submenu>
         </el-menu>
       </el-aside>
 
-      <el-main class="main">Main</el-main>
+      <el-main class="main">
+           <router-view></router-view>
+      </el-main>
     </el-container>
   </el-container>
 </template>
